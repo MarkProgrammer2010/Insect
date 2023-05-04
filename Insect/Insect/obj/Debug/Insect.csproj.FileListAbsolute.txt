@@ -1,0 +1,8 @@
+D:\C#\OOП\Insect\Insect\Insect\bin\Debug\Insect.exe.config
+D:\C#\OOП\Insect\Insect\Insect\bin\Debug\Insect.exe
+D:\C#\OOП\Insect\Insect\Insect\bin\Debug\Insect.pdb
+D:\C#\OOП\Insect\Insect\Insect\obj\Debug\Insect.csproj.AssemblyReference.cache
+D:\C#\OOП\Insect\Insect\Insect\obj\Debug\Insect.csproj.SuggestedBindingRedirects.cache
+D:\C#\OOП\Insect\Insect\Insect\obj\Debug\Insect.csproj.CoreCompileInputs.cache
+D:\C#\OOП\Insect\Insect\Insect\obj\Debug\Insect.exe
+D:\C#\OOП\Insect\Insect\Insect\obj\Debug\Insect.pdb

@@ -12,51 +12,53 @@ namespace Insect
     {
         static void Main(string[] args)
         {
-            Bee _bee = new Bee("Beetly");
+            Bee bee = new Bee("Beetly");
 
             int counter = 1;
-            while (_bee.Alive || counter <= 30)
+            while (bee.Alive || counter <= 30) //проблема
             {
-                Console.WriteLine($"Day:{counter}\n");
+                Console.WriteLine($"Day: {counter}\n");
 
-                Check(_bee);
+                Check(bee);
 
-                _bee.CheckAlive();
+                bee.CheckAlive();
+
+                counter++;
             }
 
-            Console.WriteLine($"{_bee.Name} died... ☠\n");
-            _bee.ShowInfo();
+            Console.WriteLine($"{bee.Name} died... ☠\n");
+            bee.ShowInfo();
         }
 
-        public static string Action(Bee _bee)
+        public static string Action(Bee bee)
         {
-            Console.WriteLine($"1. Feed {_bee.Name}\n" +
+            Console.WriteLine($"1. Feed {bee.Name}\n" +
                     $"2. Find food\n" +
                     $"3. Find honey\n" +
-                    $"4. Find out status {_bee.Name}\n");
+                    $"4. Find out status {bee.Name}\n");
             string answer = Console.ReadLine();
             return answer;
         }
 
-        public static void Check(Bee _bee)
+        public static void Check(Bee bee)
         {
-            switch (Action(_bee))
+            switch (Action(bee))
             {
                 case "1":
-                    _bee.Eat();
+                    bee.Eat();
                     break;
                 case "2":
-                    _bee.SearchFood();
+                    bee.SearchFood();
                     break;
                 case "3":
-                    _bee.SearchHoney();
+                    bee.SearchHoney();
                     break;
                 case "4":
-                    _bee.ShowInfo();
+                    bee.ShowInfo();
                     break;
                 default:
                     Console.WriteLine("Введите цифру!");
-                    Action(_bee);
+                    Action(bee);
                     break;
             }
         }
@@ -73,7 +75,7 @@ namespace Insect
         public string Name => _name;
         public bool Alive => _alive;
 
-        public Insect(string name, int provisions = 10, int satiety = 10)
+        public Insect(string name)
         {
             _name = name;
             _provisions = 10;
@@ -91,9 +93,9 @@ namespace Insect
        
         public void Eat()
         {
-            Console.WriteLine($"Your {_name} eated\n" +
-                $"Provisions {_provisions - 1} units еды\n" +
-                $"Satiety:  {_satiety + 1}  units of satiety\n");
+            Console.WriteLine($"\nYour {_name} eated\n" +
+                $"Provisions: {_provisions - 1} units of food\n" +
+                $"Satiety: {_satiety + 1} units of satiety\n");
 
             _provisions--;
             _satiety++;
@@ -101,7 +103,7 @@ namespace Insect
 
         public void SearchFood()
         {
-            Console.WriteLine($"Your {_name} found food\n" +
+            Console.WriteLine($"\nYour {_name} found food\n" +
                 $"Provisions:{_provisions + 1} units of food\n" +
                 $"Satiety: {_satiety - 1} units of satiety\n");
 
@@ -111,7 +113,7 @@ namespace Insect
 
         public virtual void ShowInfo()
         {
-            Console.WriteLine($"Состояние {_name}:\n" +
+            Console.WriteLine($"\nСостояние {_name}:\n" +
                 $"Provisions: {_provisions} units of food\n" +
                 $"Satiety: {_satiety} units of satiety\n");
         }
@@ -121,16 +123,16 @@ namespace Insect
     {
         private int _honey;
 
-        public Bee(string name, int provisions = 10, int satiety = 10, int honey = 0) : base(name, provisions, satiety)
+        public Bee(string name, int honey = 0) : base(name)
         {
             _honey = honey;
         }
 
         public void SearchHoney()
         {
-            Console.WriteLine($"Your {_name} found honey\n" +
-                $"Honey:{_honey + 1} units of honey\n" +
-                $"Satiety:  {_satiety - 1}  units of satiety\n");
+            Console.WriteLine($"\nYour {_name} found honey\n" +
+                $"Honey: {_honey + 1} units of honey\n" +
+                $"Satiety: {_satiety - 1} units of satiety\n");
 
             _honey++;
             _satiety--;

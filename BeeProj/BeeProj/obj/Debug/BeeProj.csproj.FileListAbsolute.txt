@@ -1,0 +1,8 @@
+D:\C#\OOП\Insect\BeeProj\BeeProj\bin\Debug\BeeProj.exe.config
+D:\C#\OOП\Insect\BeeProj\BeeProj\bin\Debug\BeeProj.exe
+D:\C#\OOП\Insect\BeeProj\BeeProj\bin\Debug\BeeProj.pdb
+D:\C#\OOП\Insect\BeeProj\BeeProj\obj\Debug\BeeProj.csproj.AssemblyReference.cache
+D:\C#\OOП\Insect\BeeProj\BeeProj\obj\Debug\BeeProj.csproj.SuggestedBindingRedirects.cache
+D:\C#\OOП\Insect\BeeProj\BeeProj\obj\Debug\BeeProj.csproj.CoreCompileInputs.cache
+D:\C#\OOП\Insect\BeeProj\BeeProj\obj\Debug\BeeProj.exe
+D:\C#\OOП\Insect\BeeProj\BeeProj\obj\Debug\BeeProj.pdb
